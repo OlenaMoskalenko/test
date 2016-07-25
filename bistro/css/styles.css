@@ -98,6 +98,43 @@ body {
 	border: 2px solid #3f0c1f;
 }
 
+#menu-tile, #specials-tile, #map-tile {
+ 	height: 250px;
+ 	width: 100%;
+ 	margin-bottom: 15px;
+ 	position: relative;
+ 	border: 2px solid #3f0c1f;
+ 	overflow: hidden;
+}
+
+#menu-tile:hover, #specials-tile:hover, #map-tile:hover {
+	box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#menu-tile {
+	background: url('../images/menu-tile.jpg') no-repeat; 
+	background-position: center;
+}
+
+
+#specials-tile {
+	background: url('../images/specials-tile.jpg') no-repeat; 
+	background-position: center;
+}
+
+#menu-tile span, #specials-tile span, #map-tile span {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 1.6em;
+	text-transform: uppercase;
+	background-color: #000;
+	color: #fff;
+	opacity: 0.8;
+}
+
 /* END HOME PAGE */
 
 /******* Large devices only *******/
@@ -186,7 +223,14 @@ body {
 	    border: 2px solid #fff;
 	    background-color: #f6b319;
 	    color: #951c49;
-  }
+  	}
+
+    #xs-deliver {
+		margin-top: 5px;
+		font-size: .7em;
+		letter-spacing: .1em;
+		text-transform: uppercase;
+	}
 
 	/* Home Page */
 	.container .jumbotron {
@@ -194,6 +238,33 @@ body {
 	   	padding: 0;
 	}
 
+	#menu-tile, #specials-tile {
+		width: 360px;
+		margin: 0 auto 15px;
+	}
+
+	/* End Home Page */
+
+}
+
+/******* Super extra small devices Only :-) (e.g., iPhone 4) *******/
+
+@media (max-width: 479px) {
+
+	/* Header */
+
+	.navbar-brand h1 { /* Restaurant name*/
+		padding-top: 5px;
+		font-size: 6vw; /* 1vw = 1% of viewport width */
+	}
+
+	/* End Header*/
+
+	/* Home Page */
+	#menu-tile, #specials-tile {
+		width: 280px;
+		margin: 0 auto 15px;
+	}
 	/* End Home Page */
 
 }
